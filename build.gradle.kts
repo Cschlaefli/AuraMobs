@@ -69,6 +69,12 @@ tasks {
 
 publishing {
 
+  publications {
+    create<MavenPublication>("AuraMobs") {
+        from(components["java"])
+    }
+  }
+
   repositories {
     maven {
       name = "AuraMobs"
