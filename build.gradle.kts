@@ -3,7 +3,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 plugins {
     `java-library`
     `maven-publish`
-    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "dev.aurelium"
@@ -67,22 +67,12 @@ tasks {
     }
 }
 
-tasks.withType<JavaCompile> {
-    options.encoding = "UTF-8"
-    options.compilerArgs.add("-parameters")
-    options.isFork = true
-    options.forkOptions.executable = "javac"
-}
-
 publishing {
 
   repositories {
     maven {
-      artifactId = "AuraMobs"
-      version = project.property("projectVersion") as String
-      groupId = "com.github.cschlaefli"
-      name = "GitHubPackages"
-      url = "https://maven.pkg.github.com/cschlaefli/AuraMobs"
+      name = "AuraMobs"
+      url = uri("https://maven.pkg.github.com/cschlaefli/AuraMobs")
       credentials {
         username = System.getenv("GITHUB_ACTOR")
         password = System.getenv("GITHUB_TOKEN")
