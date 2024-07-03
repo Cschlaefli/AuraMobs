@@ -77,7 +77,7 @@ publishing {
 
   repositories {
     maven {
-      name = "AuraMobs"
+      name = "auramobs"
       url = uri("https://maven.pkg.github.com/cschlaefli/AuraMobs")
       credentials {
         username = System.getenv("GITHUB_ACTOR")

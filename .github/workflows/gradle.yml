@@ -22,7 +22,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: AuraMobs
-          path: build/libs/AuraMobs-**.jar
+          path: build/libs/auramobs-**.jar
       - name: Publish package
         run: ./gradlew publish
         env:

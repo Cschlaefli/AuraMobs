@@ -1,1 +1,1 @@
-rootProject.name = "AuraMobs"
+rootProject.name = "auramobs"
