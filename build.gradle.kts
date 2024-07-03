@@ -34,7 +34,7 @@ dependencies {
 
 tasks.withType<ShadowJar> {
     val projectVersion: String by project
-    archiveFileName.set("AuraMobs-${projectVersion}.jar")
+    archiveFileName.set("auramobs-${projectVersion}.jar")
 
     relocate("co.aikar.commands", "dev.aurelium.auramobs.acf")
     relocate("co.aikar.locales", "dev.aurelium.auramobs.locales")
