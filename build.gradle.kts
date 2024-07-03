@@ -70,7 +70,7 @@ tasks {
 publishing {
 
   publications {
-    create<MavenPublication>("AuraMobs") {
+    create<MavenPublication>("auramobs") {
         from(components["java"])
     }
   }
