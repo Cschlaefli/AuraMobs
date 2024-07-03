@@ -75,13 +75,18 @@ tasks.withType<JavaCompile> {
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.github.Archy-X"
-            artifactId = "AuraMobs"
-            version = project.property("projectVersion") as String
 
-            from(components["java"])
-        }
+  repositories {
+    maven {
+      artifactId = "AuraMobs"
+      version = project.property("projectVersion") as String
+      groupId = "com.github.cschlaefli"
+      name = "GitHubPackages"
+      url = "https://maven.pkg.github.com/cschlaefli/AuraMobs"
+      credentials {
+        username = System.getenv("GITHUB_ACTOR")
+        password = System.getenv("GITHUB_TOKEN")
+      }
     }
+  }
 }
