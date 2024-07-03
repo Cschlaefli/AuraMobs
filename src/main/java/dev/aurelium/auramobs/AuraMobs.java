@@ -18,6 +18,7 @@ import dev.aurelium.auraskills.api.AuraSkillsApi;
 import dev.aurelium.auraskills.api.skill.Skill;
 import dev.aurelium.auraskills.api.skill.Skills;
 import dev.aurelium.auraskills.api.user.SkillsUser;
+import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
